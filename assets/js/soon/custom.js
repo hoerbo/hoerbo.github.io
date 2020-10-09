@@ -30,14 +30,14 @@ COMMING SOON PAGE
             s -= d*86400;
 
             var h = Math.floor(s/3600);
-            hours.html('<h1>'+h+'</h1><p>Stunden</p>');
+            hours.html('<h1>'+h+'</h1><p>Stunde'+(h!=1?'n':''),'</p>');
             s -= h*3600;
 
             var m = Math.floor(s/60);
-            minutes.html('<h1>'+m+'</h1><p>Minuten</p>');
+            minutes.html('<h1>'+m+'</h1><p>Minute'+(m!=1?'n':''),'</p>');
 
             s = Math.floor(s-m*60);
-            seconds.html('<h1>'+s+'</h1><p>Sekunden</p>');
+            seconds.html('<h1>'+s+'</h1><p>Sekunde'+(s!=1?'n':''),'</p>');
             setTimeout(setDate, 1000);
 
             message.html('Das Licht der Welt erblickt vor genau:');
