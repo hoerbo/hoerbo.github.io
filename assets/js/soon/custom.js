@@ -24,7 +24,7 @@ COMMING SOON PAGE
             var s = -now.getTimezoneOffset()*60 + (launch.getTime() - now.getTime())/1000;
 			s=-s;
             var d = Math.floor(s/86400);
-			var geld = 666.66 + Math.floor(s/3600)*1/100; /*666.66 + 1cent/h*/
+			var geld =  Math.round((666.66 + (Math.floor(s/3600)*1/100)) * 100.0) / 100.0; /*666.66 + 1cent/h rounded to 2 decimals*/
 			kontostand.html('<h1>'+geld+'</h1><p>Euro</p>');
             days.html('<h1>'+d+'</h1><p>Tagen</p>');
             s -= d*86400;
